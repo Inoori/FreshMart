@@ -66,18 +66,18 @@ PendingPayment ──► Paid ──► Preparing ──► Delivering ──►
 
 ## 技术栈
 
-| 层次 | 技术 |
-|---|---|
-| 语言/框架 | .NET 9、ASP.NET Core Minimal API |
-| 架构模式 | 垂直切片、整洁架构、DDD、CQRS、事件驱动 |
-| 进程内分发 | Mediator.SourceGenerator |
-| 集成事件 | Wolverine + RabbitMQ（Outbox、Saga、重试、死信） |
+| 层次 | 技术                                                 |
+|---|------------------------------------------------------|
+| 语言/框架 | .NET 10、ASP.NET Core Minimal API                    |
+| 架构模式 | 垂直切片、整洁架构、DDD、CQRS、事件驱动              |
+| 进程内分发 | Mediator.SourceGenerator                             |
+| 集成事件 | Wolverine + RabbitMQ（Outbox、Saga、重试、死信）     |
 | AOP | Metalama（日志、事务、缓存、幂等、审计、重试、验证） |
-| 数据库 | PostgreSQL 16 |
-| 缓存/锁 | Redis 7 |
-| 消息 | RabbitMQ 3.13 |
-| 搜索 | Elasticsearch 8.x |
-| 部署 | Podman / Docker、Kubernetes、Nginx |
+| 数据库 | PostgreSQL 16                                        |
+| 缓存/锁 | Redis 7                                              |
+| 消息 | RabbitMQ 3.13                                        |
+| 搜索 | Elasticsearch 8.x                                    |
+| 部署 | Podman / Docker、Kubernetes、Nginx                   |
 | 测试 | xUnit、FluentAssertions、Testcontainers、NetArchTest |
 
 ---
@@ -223,7 +223,7 @@ FreshMart/
 
 ### 前置条件
 
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Podman](https://podman.io/) 或 [Docker](https://www.docker.com/)
 - （可选）[kubectl](https://kubernetes.io/docs/tasks/tools/) + [kind](https://kind.sigs.k8s.io/) 或 [minikube](https://minikube.sigs.k8s.io/)
 
@@ -394,7 +394,7 @@ Nginx Ingress 路由：
 
 ## 参考
 
-- [.NET 9 文档](https://learn.microsoft.com/dotnet/)
+- [.NET 10 文档](https://learn.microsoft.com/dotnet/)
 - [Wolverine 文档](https://wolverinefx.net/)
 - [Mediator.SourceGenerator](https://github.com/martinothamar/Mediator)
 - [Metalama 文档](https://doc.metalama.net/)
