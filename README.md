@@ -370,13 +370,13 @@ Nginx Ingress 路由：
 
 ## Roadmap
 
-- [x] 领域建模：Ordering / Inventory / Payment / Delivery / Catalog
-- [x] Outbox + RabbitMQ 集成事件
-- [x] 库存预占 + 乐观并发 + Redis 锁
-- [x] 支付回调幂等
-- [x] 订单状态机 + Saga 编排
-- [x] Elasticsearch 搜索索引同步
-- [x] 审计日志写 ES
+- [ ] 领域建模：Ordering / Inventory / Payment / Delivery / Catalog
+- [ ] Outbox + RabbitMQ 集成事件
+- [ ] 库存预占 + 乐观并发 + Redis 锁
+- [ ] 支付回调幂等
+- [ ] 订单状态机 + Saga 编排
+- [ ] Elasticsearch 搜索索引同步
+- [ ] 审计日志写 ES
 - [ ] 购物车上下文完整实现
 - [ ] 通知上下文（短信/推送）
 - [ ] 评价与售后
