@@ -1,9 +1,10 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/FreshMart.Api/FreshMart.Api.csproj" />
-    <Project Path="src/FreshMart.Application/FreshMart.Application.csproj" />
-    <Project Path="src/FreshMart.Domain/FreshMart.Domain.csproj" />
-    <Project Path="src/FreshMart.Infrastructure/FreshMart.Infrastructure.csproj" />
-    <Project Path="src/FreshMart.Worker/FreshMart.Worker.csproj" />
-  </Folder>
+    <Folder Name="/src/">
+        <Project Path="src/FreshMart.Api/FreshMart.Api.csproj"/>
+        <Project Path="src/FreshMart.Application/FreshMart.Application.csproj"/>
+        <Project Path="src/FreshMart.Domain/FreshMart.Domain.csproj"/>
+        <Project Path="src/FreshMart.Infrastructure/FreshMart.Infrastructure.csproj"/>
+        <Project Path="src/FreshMart.Worker/FreshMart.Worker.csproj"/>
+        <Project Path="src/FreshMart.Shared/FreshMart.Shared.csproj"/>
+    </Folder>
 </Solution>
