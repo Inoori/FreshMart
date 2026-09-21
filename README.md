@@ -1,4 +1,4 @@
-# FreshMart · 同城生鲜履约系统
+# FreshMart · 同城生鲜履约系统  xiug
 
 > 一个基于 .NET 10 + Minimal API + 垂直切片 + 整洁架构 + DDD + 事件驱动的同城生鲜电商履约系统。
 
