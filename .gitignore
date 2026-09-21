@@ -1,0 +1,182 @@
+# ============================================================
+# .NET / Visual Studio / Rider
+# ============================================================
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Oo]ut/
+[Pp]ublish/
+[Pp]ackages/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+*.rsuser
+
+# Visual Studio 缓存
+.vs/
+*.vsidx
+*.vscode/
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.history/
+
+# ============================================================
+# 构建产物
+# ============================================================
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+build/
+bld/
+artifacts/
+TestResults/
+*.trx
+*.coverage
+*.coverlet.json
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ============================================================
+# 用户/本地配置
+# ============================================================
+appsettings.Development.local.json
+appsettings.Local.json
+*.local.json
+launchSettings.json
+
+# 密钥/证书
+*.pfx
+*.p12
+*.key
+*.pem
+!deploy/nginx/certs/.gitkeep
+
+# 用户机密
+secrets.json
+*.secrets.json
+
+# ============================================================
+# Podman / Docker
+# ============================================================
+.dockerignore
+docker-compose.override.yml
+docker-compose.*.local.yml
+*.pid
+*.seed
+*.pid.lock
+
+# Podman 本地卷
+podman-volumes/
+
+# ============================================================
+# Kubernetes
+# ============================================================
+*.kubeconfig
+kubeconfig
+.kube/
+# 敏感 Secret（保留模板，忽略真实值）
+deploy/k8s/**/secret*.yaml
+!deploy/k8s/**/secret.example.yaml
+
+# ============================================================
+# 数据库
+# ============================================================
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+*.ndf
+
+# PostgreSQL 本地数据卷
+postgres-data/
+pgdata/
+
+# ============================================================
+# Redis / RabbitMQ / Elasticsearch 本地数据
+# ============================================================
+redis-data/
+rabbitmq-data/
+elasticsearch-data/
+es-data/
+
+# ============================================================
+# 日志
+# ============================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================
+# 环境变量
+# ============================================================
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ============================================================
+# 操作系统
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# 临时文件
+# ============================================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+*.orig
+*.rej
+
+# ============================================================
+# 工具
+# ============================================================
+# Metalama
+*.metalama/
+metalama-cache/
+Metalama.Cache/
+
+# EF Core 迁移临时文件
+*.efcore.tmp
+
+# dotnet tools
+.dotnet/
+tools/

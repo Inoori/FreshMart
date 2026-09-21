@@ -1,0 +1,163 @@
+# 顶层配置，告诉编辑器到此为止
+root = true
+
+# ============================================================
+# 所有文件通用
+# ============================================================
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+# ============================================================
+# C# 文件
+# ============================================================
+[*.cs]
+indent_size = 4
+
+# ---------- 命名规范 ----------
+# 私有字段：_camelCase
+dotnet_naming_rule.private_fields_should_be_underscore_camel_case.severity = warning
+dotnet_naming_rule.private_fields_should_be_underscore_camel_case.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_underscore_camel_case.style = underscore_camel_case
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_symbols.private_fields.required_modifiers = readonly
+
+dotnet_naming_style.underscore_camel_case.required_prefix = _
+dotnet_naming_style.underscore_camel_case.capitalization = camel_case
+
+# 私有非只读字段：_camelCase
+dotnet_naming_rule.private_non_readonly_fields_should_be_underscore_camel_case.severity = warning
+dotnet_naming_rule.private_non_readonly_fields_should_be_underscore_camel_case.symbols = private_non_readonly_fields
+dotnet_naming_rule.private_non_readonly_fields_should_be_underscore_camel_case.style = underscore_camel_case
+
+dotnet_naming_symbols.private_non_readonly_fields.applicable_kinds = field
+dotnet_naming_symbols.private_non_readonly_fields.applicable_accessibilities = private
+
+# 常量：PascalCase
+dotnet_naming_rule.constants_should_be_pascal_case.severity = warning
+dotnet_naming_rule.constants_should_be_pascal_case.symbols = constants
+dotnet_naming_rule.constants_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_symbols.constants.applicable_kinds = field
+dotnet_naming_symbols.constants.required_modifiers = const
+
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+# 接口：I 前缀
+dotnet_naming_rule.interfaces_should_be_prefixed_with_i.severity = warning
+dotnet_naming_rule.interfaces_should_be_prefixed_with_i.symbols = interfaces
+dotnet_naming_rule.interfaces_should_be_prefixed_with_i.style = interface_style
+
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+
+dotnet_naming_style.interface_style.required_prefix = I
+dotnet_naming_style.interface_style.capitalization = pascal_case
+
+# 类型参数：T 前缀
+dotnet_naming_rule.type_parameters_should_be_prefixed_with_t.severity = warning
+dotnet_naming_rule.type_parameters_should_be_prefixed_with_t.symbols = type_parameters
+dotnet_naming_rule.type_parameters_should_be_prefixed_with_t.style = type_parameter_style
+
+dotnet_naming_symbols.type_parameters.applicable_kinds = type_parameter
+
+dotnet_naming_style.type_parameter_style.required_prefix = T
+dotnet_naming_style.type_parameter_style.capitalization = pascal_case
+
+# ---------- this. 限定 ----------
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion
+
+# ---------- 语言关键字 vs BCL 类型 ----------
+dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
+dotnet_style_predefined_type_for_member_access = true:suggestion
+
+# ---------- 修饰符顺序 ----------
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:warning
+csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:suggestion
+
+# ---------- 表达式体 ----------
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_constructors = when_on_single_line:suggestion
+csharp_style_expression_bodied_properties = true:suggestion
+csharp_style_expression_bodied_indexers = true:suggestion
+csharp_style_expression_bodied_accessors = true:suggestion
+
+# ---------- 模式匹配 ----------
+csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
+csharp_style_prefer_switch_expression = true:suggestion
+
+# ---------- null 检查 ----------
+csharp_style_throw_expression = true:suggestion
+csharp_style_conditional_delegate_call = true:suggestion
+csharp_style_prefer_null_check_over_is_null = true:suggestion
+
+# ---------- var ----------
+csharp_style_var_for_built_in_types = false:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:suggestion
+
+# ---------- 命名空间 ----------
+csharp_style_namespace_declarations = file_scoped:warning
+csharp_style_prefer_primary_constructors = true:suggestion
+
+# ---------- using ----------
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+csharp_using_directive_placement = outside_namespace:warning
+csharp_style_prefer_global_using_directive = true:suggestion
+
+# ---------- 无用代码 ----------
+dotnet_diagnostic.IDE0005.severity = warning   # 移除无用 using
+dotnet_diagnostic.IDE0051.severity = warning   # 移除未使用的私有成员
+
+# ---------- 现代化 ----------
+csharp_style_prefer_primary_constructors = true:suggestion
+csharp_style_prefer_collection_expression = true:suggestion
+csharp_style_prefer_extended_property_pattern = true:suggestion
+csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion
+csharp_style_prefer_index_operator = true:suggestion
+csharp_style_prefer_range_operator = true:suggestion
+
+# ---------- 代码分析 ----------
+dotnet_analyzer_diagnostic.category-Style.severity = warning
+dotnet_analyzer_diagnostic.category-Performance.severity = warning
+dotnet_analyzer_diagnostic.category-Security.severity = warning
+dotnet_analyzer_diagnostic.category-Reliability.severity = warning
+
+# 异步
+csharp_style_prefer_local_over_anonymous_function = true:suggestion
+csharp_style_prefer_method_group_conversion = true:suggestion
+
+# 建议使用 ConfigureAwait(false) 的规则不强制（ASP.NET Core 不需要）
+dotnet_diagnostic.CA2007.severity = none
+
+# ============================================================
+# 项目文件与配置文件
+# ============================================================
+[*.{csproj,props,targets,proj}]
+indent_size = 2
+
+[*.{json,yml,yaml}]
+indent_size = 2
+
+[*.{xml,config}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{sh,bash}]
+indent_size = 2
+
+[Dockerfile*]
+indent_size = 4
