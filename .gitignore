@@ -98,7 +98,6 @@ podman-volumes/
 *.kubeconfig
 kubeconfig
 .kube/
-# 敏感 Secret（保留模板，忽略真实值）
 deploy/k8s/**/secret*.yaml
 !deploy/k8s/**/secret.example.yaml
 
@@ -114,7 +113,6 @@ deploy/k8s/**/secret*.yaml
 *.ldf
 *.ndf
 
-# PostgreSQL 本地数据卷
 postgres-data/
 pgdata/
 
@@ -169,14 +167,11 @@ desktop.ini
 # ============================================================
 # 工具
 # ============================================================
-# Metalama
 *.metalama/
 metalama-cache/
 Metalama.Cache/
 
-# EF Core 迁移临时文件
 *.efcore.tmp
 
-# dotnet tools
 .dotnet/
 tools/

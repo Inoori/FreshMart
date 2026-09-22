@@ -20,7 +20,6 @@ max_line_length = 120
 indent_size = 4
 
 # ---------- 命名规范 ----------
-# 私有字段：_camelCase
 dotnet_naming_rule.private_fields_should_be_underscore_camel_case.severity = warning
 dotnet_naming_rule.private_fields_should_be_underscore_camel_case.symbols = private_fields
 dotnet_naming_rule.private_fields_should_be_underscore_camel_case.style = underscore_camel_case
@@ -32,7 +31,6 @@ dotnet_naming_symbols.private_fields.required_modifiers = readonly
 dotnet_naming_style.underscore_camel_case.required_prefix = _
 dotnet_naming_style.underscore_camel_case.capitalization = camel_case
 
-# 私有非只读字段：_camelCase
 dotnet_naming_rule.private_non_readonly_fields_should_be_underscore_camel_case.severity = warning
 dotnet_naming_rule.private_non_readonly_fields_should_be_underscore_camel_case.symbols = private_non_readonly_fields
 dotnet_naming_rule.private_non_readonly_fields_should_be_underscore_camel_case.style = underscore_camel_case
@@ -40,7 +38,6 @@ dotnet_naming_rule.private_non_readonly_fields_should_be_underscore_camel_case.s
 dotnet_naming_symbols.private_non_readonly_fields.applicable_kinds = field
 dotnet_naming_symbols.private_non_readonly_fields.applicable_accessibilities = private
 
-# 常量：PascalCase
 dotnet_naming_rule.constants_should_be_pascal_case.severity = warning
 dotnet_naming_rule.constants_should_be_pascal_case.symbols = constants
 dotnet_naming_rule.constants_should_be_pascal_case.style = pascal_case
@@ -50,7 +47,6 @@ dotnet_naming_symbols.constants.required_modifiers = const
 
 dotnet_naming_style.pascal_case.capitalization = pascal_case
 
-# 接口：I 前缀
 dotnet_naming_rule.interfaces_should_be_prefixed_with_i.severity = warning
 dotnet_naming_rule.interfaces_should_be_prefixed_with_i.symbols = interfaces
 dotnet_naming_rule.interfaces_should_be_prefixed_with_i.style = interface_style
@@ -60,7 +56,6 @@ dotnet_naming_symbols.interfaces.applicable_kinds = interface
 dotnet_naming_style.interface_style.required_prefix = I
 dotnet_naming_style.interface_style.capitalization = pascal_case
 
-# 类型参数：T 前缀
 dotnet_naming_rule.type_parameters_should_be_prefixed_with_t.severity = warning
 dotnet_naming_rule.type_parameters_should_be_prefixed_with_t.symbols = type_parameters
 dotnet_naming_rule.type_parameters_should_be_prefixed_with_t.style = type_parameter_style
@@ -117,8 +112,8 @@ csharp_using_directive_placement = outside_namespace:warning
 csharp_style_prefer_global_using_directive = true:suggestion
 
 # ---------- 无用代码 ----------
-dotnet_diagnostic.IDE0005.severity = warning   # 移除无用 using
-dotnet_diagnostic.IDE0051.severity = warning   # 移除未使用的私有成员
+dotnet_diagnostic.IDE0005.severity = warning
+dotnet_diagnostic.IDE0051.severity = warning
 
 # ---------- 现代化 ----------
 csharp_style_prefer_primary_constructors = true:suggestion
@@ -134,11 +129,9 @@ dotnet_analyzer_diagnostic.category-Performance.severity = warning
 dotnet_analyzer_diagnostic.category-Security.severity = warning
 dotnet_analyzer_diagnostic.category-Reliability.severity = warning
 
-# 异步
 csharp_style_prefer_local_over_anonymous_function = true:suggestion
 csharp_style_prefer_method_group_conversion = true:suggestion
 
-# 建议使用 ConfigureAwait(false) 的规则不强制（ASP.NET Core 不需要）
 dotnet_diagnostic.CA2007.severity = none
 
 # ============================================================
