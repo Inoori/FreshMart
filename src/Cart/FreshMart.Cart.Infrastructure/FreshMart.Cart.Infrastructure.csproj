@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\FreshMart.Cart.Application\FreshMart.Cart.Application.csproj" />
+    <ProjectReference Include="..\FreshMart.Cart.Domain\FreshMart.Cart.Domain.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\FreshMart.Shared.Persistence\FreshMart.Shared.Persistence.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\FreshMart.Shared.Messaging\FreshMart.Shared.Messaging.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\FreshMart.Shared.Contracts\FreshMart.Shared.Contracts.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

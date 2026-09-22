@@ -1,10 +1,82 @@
 <Solution>
-    <Folder Name="/src/">
-        <Project Path="src/FreshMart.Api/FreshMart.Api.csproj"/>
-        <Project Path="src/FreshMart.Application/FreshMart.Application.csproj"/>
-        <Project Path="src/FreshMart.Domain/FreshMart.Domain.csproj"/>
-        <Project Path="src/FreshMart.Infrastructure/FreshMart.Infrastructure.csproj"/>
-        <Project Path="src/FreshMart.Worker/FreshMart.Worker.csproj"/>
-        <Project Path="src/FreshMart.Shared/FreshMart.Shared.csproj"/>
-    </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/FreshMart.Api/FreshMart.Api.csproj" />
+    <Project Path="src/FreshMart.Worker/FreshMart.Worker.csproj" />
+  </Folder>
+  <Folder Name="/src/Audit/">
+    <Project Path="src/Audit/FreshMart.Audit.Api/FreshMart.Audit.Api.csproj" />
+    <Project Path="src/Audit/FreshMart.Audit.Application/FreshMart.Audit.Application.csproj" />
+    <Project Path="src/Audit/FreshMart.Audit.Domain/FreshMart.Audit.Domain.csproj" />
+    <Project Path="src/Audit/FreshMart.Audit.Infrastructure/FreshMart.Audit.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/BuildingBlocks/">
+    <Project Path="src/BuildingBlocks/FreshMart.Shared.Contracts/FreshMart.Shared.Contracts.csproj" />
+    <Project Path="src/BuildingBlocks/FreshMart.Shared.Core/FreshMart.Shared.Core.csproj" />
+    <Project Path="src/BuildingBlocks/FreshMart.Shared.Messaging/FreshMart.Shared.Messaging.csproj" />
+    <Project Path="src/BuildingBlocks/FreshMart.Shared.Persistence/FreshMart.Shared.Persistence.csproj" />
+    <Project Path="src/BuildingBlocks/FreshMart.Shared.Validation/FreshMart.Shared.Validation.csproj" />
+    <Project Path="src/BuildingBlocks/FreshMart.Shared.Web/FreshMart.Shared.Web.csproj" />
+  </Folder>
+  <Folder Name="/src/Cart/">
+    <Project Path="src/Cart/FreshMart.Cart.Api/FreshMart.Cart.Api.csproj" />
+    <Project Path="src/Cart/FreshMart.Cart.Application/FreshMart.Cart.Application.csproj" />
+    <Project Path="src/Cart/FreshMart.Cart.Domain/FreshMart.Cart.Domain.csproj" />
+    <Project Path="src/Cart/FreshMart.Cart.Infrastructure/FreshMart.Cart.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Catalog/">
+    <Project Path="src/Catalog/FreshMart.Catalog.Api/FreshMart.Catalog.Api.csproj" />
+    <Project Path="src/Catalog/FreshMart.Catalog.Application/FreshMart.Catalog.Application.csproj" />
+    <Project Path="src/Catalog/FreshMart.Catalog.Domain/FreshMart.Catalog.Domain.csproj" />
+    <Project Path="src/Catalog/FreshMart.Catalog.Infrastructure/FreshMart.Catalog.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Delivery/">
+    <Project Path="src/Delivery/FreshMart.Delivery.Api/FreshMart.Delivery.Api.csproj" />
+    <Project Path="src/Delivery/FreshMart.Delivery.Application/FreshMart.Delivery.Application.csproj" />
+    <Project Path="src/Delivery/FreshMart.Delivery.Domain/FreshMart.Delivery.Domain.csproj" />
+    <Project Path="src/Delivery/FreshMart.Delivery.Infrastructure/FreshMart.Delivery.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Hosts/" />
+  <Folder Name="/src/Identity/">
+    <Project Path="src/Identity/FreshMart.Identity.Api/FreshMart.Identity.Api.csproj" />
+    <Project Path="src/Identity/FreshMart.Identity.Application/FreshMart.Identity.Application.csproj" />
+    <Project Path="src/Identity/FreshMart.Identity.Domain/FreshMart.Identity.Domain.csproj" />
+    <Project Path="src/Identity/FreshMart.Identity.Infrastructure/FreshMart.Identity.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Inventory/">
+    <Project Path="src/Inventory/FreshMart.Inventory.Api/FreshMart.Inventory.Api.csproj" />
+    <Project Path="src/Inventory/FreshMart.Inventory.Application/FreshMart.Inventory.Application.csproj" />
+    <Project Path="src/Inventory/FreshMart.Inventory.Domain/FreshMart.Inventory.Domain.csproj" />
+    <Project Path="src/Inventory/FreshMart.Inventory.Infrastructure/FreshMart.Inventory.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Notification/">
+    <Project Path="src/Notification/FreshMart.Notification.Api/FreshMart.Notification.Api.csproj" />
+    <Project Path="src/Notification/FreshMart.Notification.Application/FreshMart.Notification.Application.csproj" />
+    <Project Path="src/Notification/FreshMart.Notification.Domain/FreshMart.Notification.Domain.csproj" />
+    <Project Path="src/Notification/FreshMart.Notification.Infrastructure/FreshMart.Notification.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Ordering/">
+    <Project Path="src/Ordering/FreshMart.Ordering.Api/FreshMart.Ordering.Api.csproj" />
+    <Project Path="src/Ordering/FreshMart.Ordering.Application/FreshMart.Ordering.Application.csproj" />
+    <Project Path="src/Ordering/FreshMart.Ordering.Domain/FreshMart.Ordering.Domain.csproj" />
+    <Project Path="src/Ordering/FreshMart.Ordering.Infrastructure/FreshMart.Ordering.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Payment/">
+    <Project Path="src/Payment/FreshMart.Payment.Api/FreshMart.Payment.Api.csproj" />
+    <Project Path="src/Payment/FreshMart.Payment.Application/FreshMart.Payment.Application.csproj" />
+    <Project Path="src/Payment/FreshMart.Payment.Domain/FreshMart.Payment.Domain.csproj" />
+    <Project Path="src/Payment/FreshMart.Payment.Infrastructure/FreshMart.Payment.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Search/">
+    <Project Path="src/Search/FreshMart.Search.Api/FreshMart.Search.Api.csproj" />
+    <Project Path="src/Search/FreshMart.Search.Application/FreshMart.Search.Application.csproj" />
+    <Project Path="src/Search/FreshMart.Search.Domain/FreshMart.Search.Domain.csproj" />
+    <Project Path="src/Search/FreshMart.Search.Infrastructure/FreshMart.Search.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FreshMart.ArchitectureTests/FreshMart.ArchitectureTests.csproj" />
+    <Project Path="tests/FreshMart.Catalog.Tests/FreshMart.Catalog.Tests.csproj" />
+    <Project Path="tests/FreshMart.IntegrationTests/FreshMart.IntegrationTests.csproj" />
+    <Project Path="tests/FreshMart.Ordering.Tests/FreshMart.Ordering.Tests.csproj" />
+  </Folder>
 </Solution>

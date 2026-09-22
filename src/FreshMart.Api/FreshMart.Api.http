@@ -1,4 +1,4 @@
-@FreshMart.Api_HostAddress = http://localhost:5270
+@FreshMart.Api_HostAddress = http://localhost:5278
 
 GET {{FreshMart.Api_HostAddress}}/weatherforecast/
 Accept: application/json
