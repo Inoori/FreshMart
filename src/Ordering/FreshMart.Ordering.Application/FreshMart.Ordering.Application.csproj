@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\FreshMart.Ordering.Domain\FreshMart.Ordering.Domain.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\FreshMart.Shared.Core\FreshMart.Shared.Core.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\FreshMart.Shared.Validation\FreshMart.Shared.Validation.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -2,10 +2,8 @@
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
 
-  <!-- ===== 基础设施与持久化 ===== -->
   <ItemGroup Label="Persistence">
     <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.10" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10" />
@@ -13,58 +11,58 @@
     <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
   </ItemGroup>
 
-  <!-- ===== 消息与事件驱动 ===== -->
   <ItemGroup Label="Messaging">
     <PackageVersion Include="WolverineFx" Version="5.41.0" />
     <PackageVersion Include="WolverineFx.RabbitMQ" Version="5.41.0" />
     <PackageVersion Include="RabbitMQ.Client" Version="7.2.2" />
   </ItemGroup>
 
-  <!-- ===== 缓存与分布式锁 ===== -->
   <ItemGroup Label="Caching">
     <PackageVersion Include="StackExchange.Redis" Version="3.1.31" />
     <PackageVersion Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="10.0.12" />
   </ItemGroup>
 
-  <!-- ===== 搜索 ===== -->
   <ItemGroup Label="Search">
     <PackageVersion Include="Elastic.Clients.Elasticsearch" Version="9.5.1" />
   </ItemGroup>
 
-  <!-- ===== CQRS / Mediator ===== -->
   <ItemGroup Label="Mediator">
     <PackageVersion Include="Mediator.Abstractions" Version="4.0.1" />
     <PackageVersion Include="Mediator.SourceGenerator" Version="4.0.1" />
   </ItemGroup>
 
-  <!-- ===== AOP ===== -->
   <ItemGroup Label="AOP">
     <PackageVersion Include="Metalama.Framework" Version="2026.0.17" />
   </ItemGroup>
 
-  <!-- ===== 认证与授权 ===== -->
   <ItemGroup Label="Identity">
     <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.12" />
     <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
   </ItemGroup>
 
-  <!-- ===== 日志与可观测性 ===== -->
   <ItemGroup Label="Observability">
-    <PackageVersion Include="Serilog.AspNetCore" Version="10.0.0" />
-    <PackageVersion Include="Serilog.Sinks.Elasticsearch" Version="10.0.0" />
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.0.1" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.16.0" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.16.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.15.2" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.15.2" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.EntityFrameworkCore" Version="1.15.2" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.15.2" />
+    <PackageVersion Include="WolverineFx.OpenTelemetry" Version="5.41.0" />
   </ItemGroup>
 
-  <!-- ===== 主机与扩展（Worker 项目常用） ===== -->
   <ItemGroup Label="Hosting">
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.12" />
   </ItemGroup>
 
-  <!-- ===== 测试 ===== -->
+  <ItemGroup Label="AspNetCore">
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
+  </ItemGroup>
+
   <ItemGroup Label="Testing">
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
     <PackageVersion Include="xunit.v3" Version="4.0.0" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.0" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.2" />
     <PackageVersion Include="FluentAssertions" Version="7.1.0" />
     <PackageVersion Include="Testcontainers.PostgreSql" Version="4.14.0" />
     <PackageVersion Include="Testcontainers.Redis" Version="4.14.0" />
@@ -72,7 +70,6 @@
     <PackageVersion Include="Testcontainers.Elasticsearch" Version="4.14.0" />
   </ItemGroup>
 
-  <!-- ===== 架构测试 ===== -->
   <ItemGroup Label="Architecture">
     <PackageVersion Include="NetArchTest.Rules" Version="1.3.2" />
   </ItemGroup>

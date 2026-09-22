@@ -1,3 +1,28 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Worker">
 
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-FreshMart.Worker-b1983b3d-5570-408b-ac21-73eef51e053f</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\FreshMart.Shared.Core\FreshMart.Shared.Core.csproj" />
+    <ProjectReference Include="..\BuildingBlocks\FreshMart.Shared.Messaging\FreshMart.Shared.Messaging.csproj" />
+    <ProjectReference Include="..\Catalog\FreshMart.Catalog.Infrastructure\FreshMart.Catalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\Inventory\FreshMart.Inventory.Infrastructure\FreshMart.Inventory.Infrastructure.csproj" />
+    <ProjectReference Include="..\Cart\FreshMart.Cart.Infrastructure\FreshMart.Cart.Infrastructure.csproj" />
+    <ProjectReference Include="..\Ordering\FreshMart.Ordering.Infrastructure\FreshMart.Ordering.Infrastructure.csproj" />
+    <ProjectReference Include="..\Payment\FreshMart.Payment.Infrastructure\FreshMart.Payment.Infrastructure.csproj" />
+    <ProjectReference Include="..\Delivery\FreshMart.Delivery.Infrastructure\FreshMart.Delivery.Infrastructure.csproj" />
+    <ProjectReference Include="..\Notification\FreshMart.Notification.Infrastructure\FreshMart.Notification.Infrastructure.csproj" />
+    <ProjectReference Include="..\Search\FreshMart.Search.Infrastructure\FreshMart.Search.Infrastructure.csproj" />
+    <ProjectReference Include="..\Audit\FreshMart.Audit.Infrastructure\FreshMart.Audit.Infrastructure.csproj" />
+    <ProjectReference Include="..\Identity\FreshMart.Identity.Infrastructure\FreshMart.Identity.Infrastructure.csproj" />
+  </ItemGroup>
 </Project>
