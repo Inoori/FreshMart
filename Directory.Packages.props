@@ -26,11 +26,6 @@
     <PackageVersion Include="Elastic.Clients.Elasticsearch" Version="9.5.1" />
   </ItemGroup>
 
-  <ItemGroup Label="Mediator">
-    <PackageVersion Include="Mediator.Abstractions" Version="4.0.1" />
-    <PackageVersion Include="Mediator.SourceGenerator" Version="4.0.1" />
-  </ItemGroup>
-
   <ItemGroup Label="AOP">
     <PackageVersion Include="Metalama.Framework" Version="2026.0.17" />
   </ItemGroup>
