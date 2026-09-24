@@ -73,7 +73,7 @@ PendingPayment ──► Paid ──► Preparing ──► Delivering ──►
 |---|---|
 | 语言/框架 | .NET 10、ASP.NET Core Minimal API |
 | 架构模式 | 模块化单体、整洁架构、垂直切片、DDD、CQRS、事件驱动 |
-| 进程内分发 | Mediator.SourceGenerator |
+| 进程内分发 | WolverineFx（内建 Mediator 模式） |
 | 集成事件 | Wolverine + RabbitMQ（Outbox、Saga、重试、死信） |
 | AOP | Metalama（日志、事务、缓存、幂等、审计、重试、验证） |
 | 可观测性 | OpenTelemetry SDK + OTLP；开发 Aspire Dashboard，生产 EDOT Collector + Elasticsearch + Kibana |
@@ -155,7 +155,7 @@ graph LR
 ~~~text
 商家 POST /api/catalog/products
   └─► Catalog.Api CreateProduct 端点
-       └─► Mediator 分发 CreateProductCommand
+       └─► WolverineFx 分发 CreateProductCommand
             └─► 创建 Product 聚合，发布 ProductCreated
                  └─► Wolverine Outbox 发 ProductChangedIntegrationEvent 到 RabbitMQ
                       └─► Search Worker 消费，写 Elasticsearch
@@ -584,7 +584,6 @@ kubectl apply -f deploy/k8s/ingress.yaml
 
 - [.NET 10 文档](https://learn.microsoft.com/dotnet/)
 - [Wolverine 文档](https://wolverinefx.net/)
-- [Mediator.SourceGenerator](https://github.com/martinothamar/Mediator)
 - [Metalama 文档](https://doc.metalama.net/)
 - [OpenTelemetry .NET](https://opentelemetry.io/docs/languages/net/)
 - [.NET Aspire Dashboard](https://learn.microsoft.com/dotnet/aspire/fundamentals/dashboard/standalone)
